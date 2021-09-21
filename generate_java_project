@@ -2,7 +2,7 @@
 
 the_description="$2"
 lowercase=$(echo "$1" | awk '{print tolower($0)}')
-uppercase=$(echo "$lowercase" | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}')
+uppercase="$1"
 
 # copy the template and rename it
 cp -a template/ ${uppercase}/
