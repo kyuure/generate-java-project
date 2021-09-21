@@ -10,6 +10,9 @@ cp -a template/ ${uppercase}/
 # go to the homework dir
 cd ${uppercase}
 
+# change access gradlew
+chmod +x gradlew
+
 # change 'template' to user input
 sed -i '' "s/template/$uppercase/g" README.md settings.gradle
 # add simple problem statement
