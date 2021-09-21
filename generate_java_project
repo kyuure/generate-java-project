@@ -1,8 +1,9 @@
 #!/bin/bash
 
-the_description="$2"
-lowercase=$(echo "$1" | awk '{print tolower($0)}')
-uppercase="$1"
+the_description="$3"
+lowercase=$(echo "$2" | awk '{print tolower($0)}')
+uppercase="$2"
+teamname="$1"
 
 # copy the template and rename it
 cp -a template/ ${uppercase}/
@@ -26,16 +27,18 @@ mkdir -p src/main/resources
 mkdir -p src/test/resources
 
 # create a directory for main and test
-mkdir -p src/main/org/minibootcamp/${lowercase}
-mkdir -p src/test/org/minibootcamp/${lowercase}
+mkdir -p src/main/org/minibootcamp/${teamname}
+mkdir -p src/test/org/minibootcamp/${teamname}
 
 # move java files
-mv src/Template.class src/main/org/minibootcamp/${lowercase}/${uppercase}.java
-mv src/TemplateTest.class src/test/org/minibootcamp/${lowercase}/${uppercase}Test.java
+mv src/Template.class src/main/org/minibootcamp/${teamname}/${uppercase}.java
+mv src/TemplateTest.class src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
 
 # replace template to user input
-sed -i '' "s/template/$lowercase/g" src/main/org/minibootcamp/${lowercase}/${uppercase}.java
-sed -i '' "s/template/$lowercase/g" src/test/org/minibootcamp/${lowercase}/${uppercase}Test.java
-sed -i '' "s/Template/$uppercase/g" src/main/org/minibootcamp/${lowercase}/${uppercase}.java
-sed -i '' "s/Template/$uppercase/g" src/test/org/minibootcamp/${lowercase}/${uppercase}Test.java
+sed -i '' "s/template/$lowercase/g" src/main/org/minibootcamp/${teamname}/${uppercase}.java
+sed -i '' "s/template/$lowercase/g" src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
+sed -i '' "s/Template/$uppercase/g" src/main/org/minibootcamp/${teamname}/${uppercase}.java
+sed -i '' "s/Template/$uppercase/g" src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
+sed -i '' "s/teamname/$teamname/g" src/main/org/minibootcamp/${teamname}/${uppercase}.java
+sed -i '' "s/teamname/$teamname/g" src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
 
