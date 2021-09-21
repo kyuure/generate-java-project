@@ -1,0 +1,37 @@
+#!/bin/bash
+
+the_description="$2"
+lowercase=$(echo "$1" | awk '{print tolower($0)}')
+uppercase=$(echo "$lowercase" | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}')
+
+# copy the template and rename it
+cp -a template/ ${uppercase}/
+# go to the homework dir
+cd ${uppercase}
+
+# change 'template' to user input
+sed -i '' "s/template/$uppercase/g" README.md settings.gradle
+# add simple problem statement
+sed -i '' "s/problem_statement/$the_description/g" README.md
+
+# initialize git
+git init
+# git commit
+git add *
+git add .gitignore
+git commit -m "initial commit"
+
+# create a directory for main and test
+mkdir -p src/main/org/minibootcamp/${lowercase}
+mkdir -p src/test/org/minibootcamp/${lowercase}
+
+# move java files
+mv src/Template.class src/main/org/minibootcamp/${lowercase}/${uppercase}.java
+mv src/TemplateTest.class src/test/org/minibootcamp/${lowercase}/${uppercase}Test.java
+
+# replace template to user input
+sed -i '' "s/template/$lowercase/g" src/main/org/minibootcamp/${lowercase}/${uppercase}.java
+sed -i '' "s/template/$lowercase/g" src/test/org/minibootcamp/${lowercase}/${uppercase}Test.java
+sed -i '' "s/Template/$uppercase/g" src/main/org/minibootcamp/${lowercase}/${uppercase}.java
+sed -i '' "s/Template/$uppercase/g" src/test/org/minibootcamp/${lowercase}/${uppercase}Test.java
+
