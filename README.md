@@ -1,6 +1,7 @@
 # generate-java-project
 Generate Java project template based on IntelliJ (Gradle)
 
+
 ## Prerequisite
 1. bash
 2. macOS environtment (because of `sed` command)
@@ -8,6 +9,7 @@ Generate Java project template based on IntelliJ (Gradle)
   - `curl`
   - `sed`
   - `awk`
+
 
 ## How to Build
 1. Go to safe directory.
@@ -19,6 +21,7 @@ curl -#L https://github.com/kyuure/generate-java-project/tarball/main \
 chmod +x generate_java_project
 ```
 
+
 ## How to Run
 Just run this command
 ```sh
@@ -27,9 +30,41 @@ Just run this command
 change `NameOfTheProject` and `Problem statement.` to your liking.
 p.s: i'm not responsible for any error ☺️.
 
+### File Structure
+After run the file, you'll get the structure with:
+```
+template/
+├── README.md
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
+└── src
+    ├── main
+    │   ├── org
+    │   │   └── minibootcamp
+    │   │       └── template
+    │   │           └── Template.java
+    │   └── resources
+    └── test
+        ├── org
+        │   └── minibootcamp
+        │       └── template
+        │           └── TemplateTest.java
+        └── resources
+```
+with `template` and `Template` changed to your input.
+And the git log already has one commit, that is `initial commit`.
+
+
 ## How to Test
 You can add `generate_java_project` in each line with `echo `.
 Then run it. You can see what commands will be executed by `generate_java_project` file.
+
 
 ## Author
 <table>
@@ -42,6 +77,7 @@ Then run it. You can see what commands will be executed by `generate_java_projec
 </td>
   </tr>
 </table>
+
 
 ## Reference
 - [Why do you need to put #!/bin/bash at the beginning of a script file? - Stack Overflow](https://stackoverflow.com/questions/8967902/why-do-you-need-to-put-bin-bash-at-the-beginning-of-a-script-file)
