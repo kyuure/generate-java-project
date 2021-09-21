@@ -1,8 +1,7 @@
 # template
-problem_statement
 
 ## Problem Statement
-TBD
+problem_statement
 
 ### example
 ```java
