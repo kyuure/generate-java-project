@@ -34,7 +34,7 @@ p.s: i'm not responsible for any error ☺️.
 ### File Structure
 After run the file, you'll get the structure with:
 ```
-template/
+NameOfTheProject/
 ├── README.md
 ├── build.gradle
 ├── gradle
@@ -48,14 +48,14 @@ template/
     ├── main
     │   ├── org
     │   │   └── minibootcamp
-    │   │       └── teamname
-    │   │           └── Template.java
+    │   │       └── TeamName
+    │   │           └── NameOfTheProject.java
     │   └── resources
     └── test
         ├── org
         │   └── minibootcamp
-        │       └── teamname
-        │           └── TemplateTest.java
+        │       └── TeamName
+        │           └── NameOfTheProjectTest.java
         └── resources
 ```
 with `teamname` and `Template` changed to your input.
