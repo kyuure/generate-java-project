@@ -1,4 +1,4 @@
-package org.example.template;
+package org.minibootcamp.teamname;
 
 public class Template {
     public static void main(String[] args) {

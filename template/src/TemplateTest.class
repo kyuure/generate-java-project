@@ -1,4 +1,4 @@
-package org.example.template;
+package org.minibootcamp.teamname;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
