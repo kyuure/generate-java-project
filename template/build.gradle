@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'org.minibootcamp'
-version '1.0-SNAPSHOT'
+group 'org.minibootcamp.pasti'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -17,3 +17,4 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
