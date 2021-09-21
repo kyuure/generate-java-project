@@ -7,6 +7,7 @@ Generate Java project template based on IntelliJ (Gradle)
 2. macOS environtment (because of `sed` command)
 3. some command:
   - `curl`
+  - `git`
   - `sed`
   - `awk`
 
@@ -25,9 +26,9 @@ chmod +x generate_java_project
 ## How to Run
 Just run this command
 ```sh
-./generate_java_project NameOfTheProject "Problem statement."
+./generate_java_project TeamName NameOfTheProject "Problem statement."
 ```
-change `NameOfTheProject` and `Problem statement.` to your liking.
+change `TeamName`, `NameOfTheProject` and `Problem statement.` to your liking. <br>
 p.s: i'm not responsible for any error ☺️.
 
 ### File Structure
@@ -47,17 +48,17 @@ template/
     ├── main
     │   ├── org
     │   │   └── minibootcamp
-    │   │       └── template
+    │   │       └── teamname
     │   │           └── Template.java
     │   └── resources
     └── test
         ├── org
         │   └── minibootcamp
-        │       └── template
+        │       └── teamname
         │           └── TemplateTest.java
         └── resources
 ```
-with `template` and `Template` changed to your input.
+with `teamname` and `Template` changed to your input.
 And the git log already has one commit, that is `initial commit`.
 
 
