@@ -30,18 +30,18 @@ mkdir -p src/main/resources
 mkdir -p src/test/resources
 
 # create a directory for main and test
-mkdir -p src/main/org/minibootcamp/${teamname}
-mkdir -p src/test/org/minibootcamp/${teamname}
+mkdir -p src/main/java/org/minibootcamp/${teamname}
+mkdir -p src/test/java/org/minibootcamp/${teamname}
 
 # move java files
-mv src/Template.class src/main/org/minibootcamp/${teamname}/${uppercase}.java
-mv src/TemplateTest.class src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
+mv src/Template.class src/main/java/org/minibootcamp/${teamname}/${uppercase}.java
+mv src/TemplateTest.class src/test/java/org/minibootcamp/${teamname}/${uppercase}Test.java
 
 # replace template to user input
-sed -i '' "s/template/$lowercase/g" src/main/org/minibootcamp/${teamname}/${uppercase}.java
-sed -i '' "s/template/$lowercase/g" src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
-sed -i '' "s/Template/$uppercase/g" src/main/org/minibootcamp/${teamname}/${uppercase}.java
-sed -i '' "s/Template/$uppercase/g" src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
-sed -i '' "s/teamname/$teamname/g" src/main/org/minibootcamp/${teamname}/${uppercase}.java
-sed -i '' "s/teamname/$teamname/g" src/test/org/minibootcamp/${teamname}/${uppercase}Test.java
+sed -i '' "s/template/$lowercase/g" src/main/java/org/minibootcamp/${teamname}/${uppercase}.java
+sed -i '' "s/template/$lowercase/g" src/test/java/org/minibootcamp/${teamname}/${uppercase}Test.java
+sed -i '' "s/Template/$uppercase/g" src/main/java/org/minibootcamp/${teamname}/${uppercase}.java
+sed -i '' "s/Template/$uppercase/g" src/test/java/org/minibootcamp/${teamname}/${uppercase}Test.java
+sed -i '' "s/teamname/$teamname/g" src/main/java/org/minibootcamp/${teamname}/${uppercase}.java
+sed -i '' "s/teamname/$teamname/g" src/test/java/org/minibootcamp/${teamname}/${uppercase}Test.java
 
