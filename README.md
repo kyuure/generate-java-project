@@ -46,16 +46,18 @@ NameOfTheProject/
 ├── settings.gradle
 └── src
     ├── main
-    │   ├── org
-    │   │   └── minibootcamp
-    │   │       └── TeamName
-    │   │           └── NameOfTheProject.java
+    │   ├── java
+    │   │   └── org
+    │   │       └── minibootcamp
+    │   │           └── TeamName
+    │   │               └── NameOfTheProject.java
     │   └── resources
     └── test
-        ├── org
-        │   └── minibootcamp
-        │       └── TeamName
-        │           └── NameOfTheProjectTest.java
+        ├── java
+        │   └── org
+        │       └── minibootcamp
+        │           └── TeamName
+        │               └── NameOfTheProjectTest.java
         └── resources
 ```
 with `teamname` and `Template` changed to your input.
