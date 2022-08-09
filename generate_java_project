@@ -22,7 +22,6 @@ git init
 # git commit
 git add *
 git add .gitignore
-git commit -m "initial commit"
 
 # create resources directories
 mkdir -p src/main/resources
