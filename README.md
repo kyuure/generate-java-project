@@ -26,9 +26,9 @@ chmod +x generate_java_project
 ## How to Run
 Just run this command
 ```sh
-./generate_java_project NameOfTheProject "Problem statement."
+./generate_java_project batch02 NameOfTheProject "Problem statement."
 ```
-change `TeamName`, `NameOfTheProject` and `Problem statement.` to your liking. <br>
+change `NameOfTheProject` and `Problem statement.` to your liking. <br>
 p.s: i'm not responsible for any error ☺️.
 
 ### File Structure
@@ -48,15 +48,15 @@ NameOfTheProject/
     ├── main
     │   ├── java
     │   │   └── org
-    │   │       └── minibootcamp
-    │   │           └── TeamName
+    │   │       └── bootcamp
+    │   │           └── batch02
     │   │               └── NameOfTheProject.java
     │   └── resources
     └── test
         ├── java
         │   └── org
-        │       └── minibootcamp
-        │           └── TeamName
+        │       └── bootcamp
+        │           └── batch02
         │               └── NameOfTheProjectTest.java
         └── resources
 ```
