@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.bootcamp.pasti'
+group 'org.minibootcamp.pasti'
 version '1.0'
 
 repositories {
