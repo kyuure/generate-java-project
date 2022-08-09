@@ -16,17 +16,19 @@ Generate Java project template based on IntelliJ (Gradle)
 1. Go to safe directory.
 2. Run
 ```sh
+bash
 curl -#L https://github.com/kyuure/generate-java-project/tarball/main \
   | tar xzv --strip-components 1 \
     --exclude={README.md}
 chmod +x generate_java_project
+exit
 ```
 
 
 ## How to Run
 Just run this command
 ```sh
-./generate_java_project batch02 NameOfTheProject "Problem statement."
+./generate_java_project NameOfTheProject "Problem statement."
 ```
 change `NameOfTheProject` and `Problem statement.` to your liking. <br>
 p.s: i'm not responsible for any error ☺️.
@@ -49,18 +51,18 @@ NameOfTheProject/
     │   ├── java
     │   │   └── org
     │   │       └── bootcamp
-    │   │           └── batch02
-    │   │               └── NameOfTheProject.java
+    │   │           └── nameoftheproject
+    │   │               └── Template.java
     │   └── resources
     └── test
         ├── java
         │   └── org
         │       └── bootcamp
-        │           └── batch02
-        │               └── NameOfTheProjectTest.java
+        │           └── nameoftheproject
+        │               └── TemplateTest.java
         └── resources
 ```
-with `teamname` and `Template` changed to your input.
+with `nameoftheproject` and `Template` changed to your input.
 And the git log already has one commit, that is `initial commit`.
 
 
