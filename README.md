@@ -16,10 +16,12 @@ Generate Java project template based on IntelliJ (Gradle)
 1. Go to safe directory.
 2. Run
 ```sh
+bash
 curl -#L https://github.com/kyuure/generate-java-project/tarball/main \
   | tar xzv --strip-components 1 \
     --exclude={README.md}
 chmod +x generate_java_project
+exit
 ```
 
 
