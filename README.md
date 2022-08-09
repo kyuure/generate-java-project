@@ -28,7 +28,7 @@ exit
 ## How to Run
 Just run this command
 ```sh
-./generate_java_project batch02 NameOfTheProject "Problem statement."
+./generate_java_project NameOfTheProject "Problem statement."
 ```
 change `NameOfTheProject` and `Problem statement.` to your liking. <br>
 p.s: i'm not responsible for any error ☺️.
@@ -51,18 +51,18 @@ NameOfTheProject/
     │   ├── java
     │   │   └── org
     │   │       └── bootcamp
-    │   │           └── batch02
+    │   │           └── nameproject
     │   │               └── NameOfTheProject.java
     │   └── resources
     └── test
         ├── java
         │   └── org
         │       └── bootcamp
-        │           └── batch02
+        │           └── nameproject
         │               └── NameOfTheProjectTest.java
         └── resources
 ```
-with `teamname` and `Template` changed to your input.
+with `nameproject` and `Template` changed to your input.
 And the git log already has one commit, that is `initial commit`.
 
 
