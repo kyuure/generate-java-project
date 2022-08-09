@@ -21,6 +21,7 @@ curl -#L https://github.com/kyuure/generate-java-project/tarball/namespaces \
   | tar xzv --strip-components 1 \
     --exclude={README.md}
 chmod +x generate_java_project
+mv template/ template_java/
 exit
 ```
 
