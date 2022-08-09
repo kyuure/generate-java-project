@@ -17,7 +17,7 @@ Generate Java project template based on IntelliJ (Gradle)
 2. Run
 ```sh
 bash
-curl -#L https://github.com/kyuure/generate-java-project/tarball/main \
+curl -#L https://github.com/kyuure/generate-java-project/tarball/namespaces \
   | tar xzv --strip-components 1 \
     --exclude={README.md}
 chmod +x generate_java_project
