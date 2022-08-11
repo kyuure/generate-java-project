@@ -1,20 +1,19 @@
 # template
 
-## Problem Statement
 problem_statement
 
 ## Prerequisite
-- JDK version 18.0.2 
-- Gradle version 7.4
+
+- JDK version 18.0.2
 
 ## How to build
-```bash
-./gradlew build
-```
+
+TBD
 
 ## How to use
+
 TBD
 
 ## How to test
-TBD
 
+TBD

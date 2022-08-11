@@ -13,15 +13,14 @@ cd ${uppercase}
 chmod +x gradlew
 
 # change 'template' to user input
-sed -i '' "s/template/$uppercase/g" README.md settings.gradle
+sed -i '' "s/template/$uppercase/g" README.md settings.gradle build.gradle
 # add simple problem statement
 sed -i '' "s/problem_statement/$the_description/g" README.md
 
 # initialize git
 git init
 # git commit
-git add *
-git add .gitignore
+git add README.md .gitignore gradlew gradle/* build.gradle settings.gradle
 
 # create resources directories
 mkdir -p src/main/resources
