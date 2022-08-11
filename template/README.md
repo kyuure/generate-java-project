@@ -3,15 +3,14 @@
 ## Problem Statement
 problem_statement
 
-### example
-```java
-```
-
 ## Prerequisite
-TBD
+- JDK version 18.0.2 
+- Gradle version 7.4
 
 ## How to build
-TBD
+```bash
+./gradlew build
+```
 
 ## How to use
 TBD
