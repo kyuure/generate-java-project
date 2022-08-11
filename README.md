@@ -13,6 +13,16 @@ Generate Java project template based on IntelliJ (Gradle)
 
 
 ## How to Build
+### git clone
+1. Go to safe directory.
+2. Run
+```sh
+git clone https://github.com/kyuure/generate-java-project.git
+chmod +x generate_java_project
+mv template/ template_java/
+```
+
+### Download file
 1. Go to safe directory.
 2. Run
 ```sh
