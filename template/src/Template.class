@@ -1,7 +1,6 @@
-package org.bootcamp.teamname;
+package org.bootcamp.template;
 
 public class Template {
     public static void main(String[] args) {
     }
 }
-
