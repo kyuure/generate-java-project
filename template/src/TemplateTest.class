@@ -1,6 +1,7 @@
-package org.bootcamp.teamname;
+package org.bootcamp.template;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TemplateTest {
@@ -8,4 +9,3 @@ class TemplateTest {
     void firstCase() {
     }
 }
-
