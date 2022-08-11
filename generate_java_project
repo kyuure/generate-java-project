@@ -5,7 +5,7 @@ lowercase=$(echo "$1" | awk '{print tolower($0)}')
 uppercase="$1"
 
 # copy the template and rename it
-cp -a template_java/ ${uppercase}/
+cp -a template/ ${uppercase}/
 # go to the homework dir
 cd ${uppercase}
 
