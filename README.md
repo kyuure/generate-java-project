@@ -12,33 +12,36 @@ Generate Java project template based on IntelliJ (Gradle)
   - `awk`
 
 
-## How to Build
-### git clone
-1. Go to safe directory.
+## How to Install
+1. Go to any safe directory.
 2. Run
-```sh
-git clone https://github.com/kyuure/generate-java-project.git
-cd generate-java-project/
-chmod +x generate_java_project
-```
+    ```sh
+    git clone https://github.com/kyuure/generate-java-project.git
+    cd generate-java-project/
+    chmod +x generate_java_project
+    ```
+3. Add script as an alias.
 
-### Download file
-1. Go to safe directory.
-2. Run
-```sh
-bash
-curl -#L https://github.com/kyuure/generate-java-project/tarball/namespaces \
-  | tar xzv --strip-components 1 \
-    --exclude={README.md}
-chmod +x generate_java_project
-exit
-```
+    For zsh user
+    ```sh
+    cat >> ~/.zshrc <<EOL
+    export GTF_JAVA_SG="$PWD"
+    alias generate_java_project="\$GTF_JAVA_SG/generate_java_project"
+    EOL
+    ```
 
+    For bash user
+    ```sh
+    cat >> ~/.bashrc <<EOL
+    export GTF_JAVA_SG="$PWD"
+    alias generate_java_project="\$GTF_JAVA_SG/generate_java_project"
+    EOL
+    ```
 
 ## How to Run
-Just run this command
+Run this command from anywhere
 ```sh
-./generate_java_project NameOfTheProject "Problem statement."
+generate_java_project NameOfTheProject "Problem statement."
 ```
 change `NameOfTheProject` and `Problem statement.` to your liking. <br>
 p.s: i'm not responsible for any error ☺️.
