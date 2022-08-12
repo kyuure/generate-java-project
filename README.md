@@ -37,6 +37,18 @@ Generate Java project template based on IntelliJ (Gradle)
     alias generate_java_project="\$GTF_JAVA_SG/generate_java_project"
     EOL
     ```
+    
+## How to download
+1. Go to safe directory.
+2. Run
+```sh
+bash
+curl -#L https://github.com/kyuure/generate-java-project/tarball/namespaces \
+  | tar xzv --strip-components 1 \
+    --exclude={README.md}
+chmod +x generate_java_project
+exit
+```
 
 ## How to Run
 Run this command from anywhere
