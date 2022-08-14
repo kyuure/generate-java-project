@@ -96,17 +96,30 @@ You can add `generate_java_project` in each line with `echo `.
 Then run it. You can see what commands will be executed by `generate_java_project` file.
 
 
-## Author
+## Contributors
 <table>
   <tr>
 <td align="center">
-  <img src="https://avatars.githubusercontent.com/kyuure" width="100px;" alt="Salsabila Qothrunnada" style="border-radius:50%"/>
+  <img src="https://avatars.githubusercontent.com/kyuure" width="100px;" alt="S Qothrunnada" style="border-radius:50%"/>
   <br/>
   <sub><b>S Qothrunnada</b></sub>
   <br/>
 </td>
+<td align="center">
+  <img src="https://avatars.githubusercontent.com/mastree" width="100px;" alt="Kamal Shafi" style="border-radius:50%"/>
+  <br/>
+  <sub><b>Kamal Shafi</b></sub>
+  <br/>
+</td>
+<td align="center">
+  <img src="https://avatars.githubusercontent.com/andhikayusup" width="100px;" alt="Andhika Yusup Maulana" style="border-radius:50%"/>
+  <br/>
+  <sub><b>Andhika Yusup Maulana</b></sub>
+  <br/>
+</td>
   </tr>
 </table>
+
 
 
 ## Reference
@@ -114,4 +127,3 @@ Then run it. You can see what commands will be executed by `generate_java_projec
 - [How can I pass a command line argument into a shell script? - Unix - Linux Stack Exchange](https://unix.stackexchange.com/questions/31414/how-can-i-pass-a-command-line-argument-into-a-shell-script)
 - [How do I use variables in a sed command? - Ask Ubuntu9](https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command)
 - [Changing the case of a string with awk - Stack Overflow](https://stackoverflow.com/questions/14139672/changing-the-case-of-a-string-with-awk)
-
