@@ -16,6 +16,11 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
+jacoco {
+    toolVersion = "0.8.8"
+    reportsDir = file('jacoco')
+}
+
 test {
     useJUnitPlatform()
     finalizedBy jacocoTestReport
