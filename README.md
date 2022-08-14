@@ -117,6 +117,12 @@ Then run it. You can see what commands will be executed by `generate_java_projec
   <sub><b>Andhika Yusup Maulana</b></sub>
   <br/>
 </td>
+<td align="center">
+  <img src="https://avatars.githubusercontent.com/BeRay31" width="100px;" alt="Reyvan Rizky Irsandy" style="border-radius:50%"/>
+  <br/>
+  <sub><b>Reyvan Rizky Irsandy</b></sub>
+  <br/>
+</td>
   </tr>
 </table>
 
