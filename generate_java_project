@@ -1,46 +1,65 @@
 #!/bin/bash
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+project_name_capitalcase=$(echo "$1" | awk -vFS="" -vOFS="" '{$1=toupper($1);print $0}')
+project_name_lowercase=$(echo "$1" | awk '{print tolower($0)}')
+project_description="$2"
 
-the_description="$2"
-lowercase=$(echo "$1" | awk '{print tolower($0)}')
-uppercase="$1"
+function main() {
+    initialize_folder_structure
+    setup_new_project
+}
 
-# copy the template and rename it
-cp -a ${SCRIPT_DIR}/template/ ${uppercase}/
-# go to the homework dir
-cd ${uppercase}
+function initialize_folder_structure() {
+    cp -a ${SCRIPT_DIR}/template/ ${project_name_capitalcase}/
+    cd ${project_name_capitalcase}
 
-# change access gradlew
-chmod +x gradlew
+    mkdir -p src/main/resources
+    mkdir -p src/test/resources
+    mkdir -p src/main/java/org/bootcamp/${project_name_lowercase}
+    mkdir -p src/test/java/org/bootcamp/${project_name_lowercase}
+}
 
-# change 'template' to user input
-sed -i '' "s/template/$uppercase/g" README.md settings.gradle
-sed -i '' "s/template/$lowercase/g" build.gradle
-# add simple problem statement
-sed -i '' "s/problem_statement/$the_description/g" README.md
+function setup_new_project() {
+    setup_java_files
+    replace_template_strings
+    setup_and_prepare_git
+}
 
-# initialize git
-git init
-# git commit
-git add README.md .gitignore gradlew gradle/* build.gradle settings.gradle
+function setup_java_files() {
+    mv src/Template.class src/main/java/org/bootcamp/${project_name_lowercase}/${project_name_capitalcase}.java
+    mv src/TemplateTest.class src/test/java/org/bootcamp/${project_name_lowercase}/${project_name_capitalcase}Test.java
 
-# create resources directories
-mkdir -p src/main/resources
-mkdir -p src/test/resources
+    chmod +x gradlew
+}
 
-# create a directory for main and test
-mkdir -p src/main/java/org/bootcamp/${lowercase}
-mkdir -p src/test/java/org/bootcamp/${lowercase}
+function replace_template_strings() {
+    sed -i '' "s/template/$project_name_capitalcase/g" README.md
+    sed -i '' "s/problem_statement/$project_description/g" README.md
 
-# move java files
-mv src/Template.class src/main/java/org/bootcamp/${lowercase}/${uppercase}.java
-mv src/TemplateTest.class src/test/java/org/bootcamp/${lowercase}/${uppercase}Test.java
+    sed -i '' "s/template/$project_name_capitalcase/g" settings.gradle
+    sed -i '' "s/template/$project_name_lowercase/g" build.gradle
 
-# replace template to user input
-sed -i '' "s/template/$lowercase/g" src/main/java/org/bootcamp/${lowercase}/${uppercase}.java
-sed -i '' "s/template/$lowercase/g" src/test/java/org/bootcamp/${lowercase}/${uppercase}Test.java
-sed -i '' "s/Template/$uppercase/g" src/main/java/org/bootcamp/${lowercase}/${uppercase}.java
-sed -i '' "s/Template/$uppercase/g" src/test/java/org/bootcamp/${lowercase}/${uppercase}Test.java
-sed -i '' "s/lowercase/$lowercase/g" src/main/java/org/bootcamp/${lowercase}/${uppercase}.java
-sed -i '' "s/lowercase/$lowercase/g" src/test/java/org/bootcamp/${lowercase}/${uppercase}Test.java
+    sed -i '' "s/template/$project_name_lowercase/g" src/main/java/org/bootcamp/${project_name_lowercase}/${project_name_capitalcase}.java
+    sed -i '' "s/template/$project_name_lowercase/g" src/test/java/org/bootcamp/${project_name_lowercase}/${project_name_capitalcase}Test.java
+    sed -i '' "s/Template/$project_name_capitalcase/g" src/main/java/org/bootcamp/${project_name_lowercase}/${project_name_capitalcase}.java
+    sed -i '' "s/Template/$project_name_capitalcase/g" src/test/java/org/bootcamp/${project_name_lowercase}/${project_name_capitalcase}Test.java
+}
+
+function setup_and_prepare_git() {
+    git init
+    pre-commit install
+    prepare_first_commit
+}
+
+function prepare_first_commit() {
+    git add README.md
+    git add .gitignore
+    git add .pre-commit-config.yaml
+    git add gradlew
+    git add gradle/*
+    git add build.gradle
+    git add settings.gradle
+}
+
+main
