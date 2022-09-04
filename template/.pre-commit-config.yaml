@@ -1,14 +1,14 @@
 repos:
-  - repo: https://github.com/jguttman94/pre-commit-gradle
-    rev: v0.2.1
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.3.0
+      hooks:
+        -   id: end-of-file-fixer
+        -   id: trailing-whitespace
+  - repo: local
     hooks:
-      - id: gradle-check
-  - repo: https://github.com/ThomasKoppensteiner/google-style-precommit-hook/
-    rev: v1.0.0
-    hooks:
-      - id: google-style-java
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
-    hooks:
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
+      - id: gradle-test
+        name: test with this project's gradlew
+        entry: ./gradlew test
+        language: system
+        types: [java]
+        pass_filenames: false

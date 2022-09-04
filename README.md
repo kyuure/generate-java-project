@@ -100,27 +100,23 @@ Then run it. You can see what commands will be executed by `generate_java_projec
 <table>
   <tr>
 <td align="center">
-  <img src="https://avatars.githubusercontent.com/kyuure" width="100px;" alt="S Qothrunnada" style="border-radius:50%"/>
-  <br/>
-  <sub><b>S Qothrunnada</b></sub>
+  <img src="https://avatars.githubusercontent.com/kyuure" width="75px;" alt="S Qothrunnada" style="border-radius:50%"/>
   <br/>
 </td>
 <td align="center">
-  <img src="https://avatars.githubusercontent.com/mastree" width="100px;" alt="Kamal Shafi" style="border-radius:50%"/>
-  <br/>
-  <sub><b>Kamal Shafi</b></sub>
+  <img src="https://avatars.githubusercontent.com/mastree" width="75px;" alt="Kamal Shafi" style="border-radius:50%"/>
   <br/>
 </td>
 <td align="center">
-  <img src="https://avatars.githubusercontent.com/andhikayusup" width="100px;" alt="Andhika Yusup Maulana" style="border-radius:50%"/>
-  <br/>
-  <sub><b>Andhika Yusup Maulana</b></sub>
+  <img src="https://avatars.githubusercontent.com/andhikayusup" width="75px;" alt="Andhika Yusup Maulana" style="border-radius:50%"/>
   <br/>
 </td>
 <td align="center">
-  <img src="https://avatars.githubusercontent.com/BeRay31" width="100px;" alt="Reyvan Rizky Irsandy" style="border-radius:50%"/>
+  <img src="https://avatars.githubusercontent.com/BeRay31" width="75px;" alt="Reyvan Rizky Irsandy" style="border-radius:50%"/>
   <br/>
-  <sub><b>Reyvan Rizky Irsandy</b></sub>
+</td>
+<td align="center">
+  <img src="https://avatars.githubusercontent.com/margunwa123" width="75px;" alt="Mario Gunawan" style="border-radius:50%"/>
   <br/>
 </td>
   </tr>
