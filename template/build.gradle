@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id 'org.barfuin.gradle.jacocolog' version '2.0.0'
+    id 'com.diffplug.gradle.spotless' version '4.5.1'
 }
 
 group 'org.bootcamp.template'
@@ -14,6 +15,7 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.google.googlejavaformat:google-java-format:1.9'
 }
 
 jacoco {
@@ -23,7 +25,12 @@ jacoco {
 
 test {
     useJUnitPlatform()
+    dependsOn spotlessApply
     finalizedBy jacocoTestReport
+}
+
+jar {
+    dependsOn spotlessApply
 }
 
 jacocoTestReport {
@@ -44,5 +51,14 @@ jar {
 
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+        trimTrailingWhitespace()
+        indentWithSpaces(2)
+        endWithNewline()
     }
 }
